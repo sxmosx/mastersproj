@@ -31,7 +31,6 @@ print('Mask values - min, max, nonzero count:',
 #np.sum = number of pixels within the footprint
 #Multiplying by the area of one pixel = total area in square degrees
 area_kids_deg2 = np.sum(mask > 0) * pixarea_deg2
-print(f'sky area ≈ {area_kids_deg2:.1f} deg squared')
 
 #showing the mask
 hp.mollview(mask, title="KiDS mask")
