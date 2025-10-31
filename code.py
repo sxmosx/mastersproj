@@ -21,9 +21,9 @@ pixarea_deg2 = hp.nside2pixarea(nside, degrees=True)
 #printing stats 
 #mask.size - number of pixels in the mask
 #mask.min()/max() - min/max values in the mask - 0-80? for kids 
-print(f"KiDS mask: NSIDE={nside}, npix={mask.size}")
+print(f'KiDS mask: NSIDE={nside}, npix={mask.size}')
 #number of pixels that are nonzero =  covered by survey footprint
-print("Mask values - min, max, nonzero count:",
+print('Mask values - min, max, nonzero count:',
       float(mask.min()), float(mask.max()), int(np.count_nonzero(mask)))
 
 #calculating sky areas
@@ -31,7 +31,7 @@ print("Mask values - min, max, nonzero count:",
 #np.sum = number of pixels within the footprint
 #Multiplying by the area of one pixel = total area in square degrees
 area_kids_deg2 = np.sum(mask > 0) * pixarea_deg2
-print(f"sky area ≈ {area_kids_deg2:.1f} deg squared")
+print(f'sky area ≈ {area_kids_deg2:.1f} deg squared')
 
 #showing the mask
 hp.mollview(mask, title="KiDS mask")
