@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 #loading the kids mask
 #each pixel = value describing coverage/weight (0 = empty, >0 = observed e.g.) 
-KIDS_MASK_PATH = "/share/data1/xzcapsad/des_kids/kids_dr4/kids_mask_pixels_nside128.npy" 
+KIDS_MASK_PATH = "/share/data1/xzcapsad/des_kids/kids_dr4//K1000_healpix_DR4.1_nside_4096.fits" 
 
 #returns a 1D numpy array - each element corresponds to a pixel on the sphere
 #mask shape = (12*nside^2,)
